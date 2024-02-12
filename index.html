@@ -2,37 +2,108 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geometry - Genius</title>
-    <!-- tailwind -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.3/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geometry - Genius</title>
+  <!-- tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 </head>
 
-<body>
+<body style="font-family: 'Inter', sans-serif;">
 
-    <header class="max-w-[1440px] md:w-10/12 mx-auto shadow-lg">
-        <nav>
-            <div class="navbar">
-                <div class="flex-1">
-                  <a class="btn btn-ghost text-xl text-blue-600 uppercase">Geometry <span class="font-bold text-red-600">Genius</span></a>
-                </div>
-                <div class="flex-none">
-                  <button class="btn btn-square btn-ghost">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current text-blue-600"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
-                  </button>
-                </div>
+  <header class="max-w-[1440px] md:w-10/12 mx-auto shadow-lg">
+    <nav>
+      <div class="navbar">
+        <div class="flex-1">
+          <a href="./index.html" class="btn btn-ghost text-xl text-blue-600 uppercase">Geometry <span
+              class="font-bold text-red-600">Genius</span></a>
+        </div>
+        <div class="flex-none">
+          <button class="btn btn-square btn-ghost">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              class="inline-block w-5 h-5 stroke-current text-blue-600">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z">
+              </path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="max-w-[1440px] w-10/12 mx-auto mt-5">
+    <section class="flex flex-col md:flex-row gap-6">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="card card-compact w-full bg-base-100 max-h-[400px]" style="box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;">
+          <figure class="px-5 py-3"><img class="h-full" src="./images/triangle.png" alt="loading...." /></figure>
+          <div class="card-body text-center">
+            <h2 class="text-2xl font-bold">Triangle</h2>
+            <p class="font-normal">Area (A) = 0.5 x b x h</p>
+            <div class="flex justify-center items-center gap-3 px-10">
+              <div>
+                <input class="input max-w-[95px] bg-slate-200 font-semibold" type="number" placeholder="b"> <span>cm</span>
               </div>
-        </nav>
-    </header>
+              <div>
+                <input class="input max-w-[95px] bg-slate-200 font-semibold" type="number" placeholder="b"> <span>cm</span>
+              </div>
+            </div>
+            <div class="card-actions mt-4">
+              <button class="btn bg-blue-600 w-full text-white">Calculate</button>
+            </div>
+          </div>
+        </div>
 
-    <main class="max-w-[1440px] w-10/12 mx-auto">
+        <div class="card card-compact w-full bg-base-100 max-h-[400px]" style="box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;">
+          <figure class="px-5 py-3"><img class="h-full" src="./images/rectangle.png" alt="loading...." /></figure>
+          <div class="card-body text-center">
+            <h2 class="text-2xl font-bold">Rectangle</h2>
+            <p class="font-normal">Area (A) = w x I</p>
+            <div class="flex justify-center items-center gap-3 px-10">
+              <div>
+                <input class="input max-w-[95px] bg-slate-200 font-semibold" type="number" placeholder="w"> <span>cm</span>
+              </div>
+              <div>
+                <input class="input max-w-[95px] bg-slate-200 font-semibold" type="number" placeholder="l"> <span>cm</span>
+              </div>
+            </div>
+            <div class="card-actions mt-4">
+              <button class="btn bg-blue-600 w-full text-white">Calculate</button>
+            </div>
+          </div>
+        </div>
 
-    </main>
+        <div class="card card-compact w-full bg-base-100 max-h-[400px]" style="box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;">
+          <figure class="px-5 py-3"><img class="h-full" src="./images/parallelogram.png" alt="loading...." /></figure>
+          <div class="card-body text-center">
+            <h2 class="text-2xl font-bold">Parallelogram</h2>
+            <p class="font-normal">Area (A) = b x h</p>
+            <p class="font-semibold">b=10cm, h=12cm</p>
+            <div class="card-actions">
+              <button class="btn bg-blue-600 w-full text-white">Calculate</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="md:w-96 p-6" style="box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;">
+        <h1 class="text-center underline">Area Calculation</h1>
+      </div>
+
+    </section>
+  </main>
 
 
-    <script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

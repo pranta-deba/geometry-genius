@@ -88,15 +88,24 @@
           </div>
         </div>
         <!-- grid item 3 -->
-        <div class="card card-compact w-full bg-base-100 max-h-[400px]"
-          style="box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;">
+        <div class="card card-compact w-full bg-base-100 max-h-[400px]" style="box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;">
           <figure class="px-5 py-3"><img class="h-full" src="./images/parallelogram.png" alt="loading...." /></figure>
           <div class="card-body text-center">
             <h2 class="text-2xl font-bold">Parallelogram</h2>
             <p class="font-normal">Area (A) = b x h</p>
-            <p class="font-semibold">b=10cm, h=12cm</p>
+            <div class="flex justify-center items-center gap-3 px-10">
+              <div>
+                <input id="userBaseNum2" class="input max-w-[95px] bg-slate-200 font-semibold" type="number" placeholder="b">
+                <span>cm</span>
+              </div>
+              <div>
+                <input id="userHeightNum2" class="input max-w-[95px] bg-slate-200 font-semibold" type="number" placeholder="h">
+                <span>cm</span>
+              </div>
+            </div>
+            <p class="text-red-700 font-bold">Area = <span id="parallelogramDisplay">0</span> cm<sup>2</sup></p>
             <div class="card-actions">
-              <button class="btn bg-blue-600 w-full text-white">Calculate</button>
+              <button id="parallelogramBtn" class="btn bg-blue-600 w-full text-white">Calculate</button>
             </div>
           </div>
         </div>

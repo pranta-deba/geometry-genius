@@ -4,6 +4,9 @@ const parallelogramBtn = document.getElementById("parallelogramBtn");
 const rhombusBtn = document.getElementById("rhombusBtn");
 const pentagonBtn = document.getElementById("pentagonBtn");
 const ellipseBtn = document.getElementById("ellipseBtn");
+
+const hoverEffet = document.querySelectorAll("#hoverEffet .card");
+
 // triangle
 triangleCalcBtn.addEventListener("click", () => {
   const base = getInputValueById("userBaseNum");
@@ -106,3 +109,12 @@ ellipseBtn.addEventListener('click',()=>{
   document.getElementById("ellipseDisplay").innerText = area.toFixed(2);
   areaCalculator('Ellipse',area.toFixed(2));
 });
+// hoverEffet
+hoverEffet.forEach((card)=>{
+  card.addEventListener('mouseenter', () => {
+    hoverEffet.forEach((c) => {
+      c.style.backgroundColor = '';
+    });
+    card.style.backgroundColor = 'lightblue';
+  });
+})

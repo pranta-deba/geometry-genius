@@ -18,3 +18,7 @@ function iNaNValidation(a, b) {
     return true;
   }
 }
+function areaCalculator(name,result) {
+  const areaCalculatorDisplay = document.getElementById('areaCalculatorDisplay');
+  areaCalculatorDisplay.innerHTML += `<li><span>${name}</span> -  <span class="font-semibold text-red-700">${result}</span> cm<sup>2</sup></li>`;
+}

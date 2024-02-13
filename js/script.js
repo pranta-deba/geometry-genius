@@ -19,6 +19,7 @@ triangleCalcBtn.addEventListener("click", () => {
   }
   const area = 0.5 * base * hight;
   document.getElementById("triangleDisplay").innerText = area;
+  areaCalculator('Triangle',area);
 });
 // rectangle
 rectangleCalcBtn.addEventListener("click", () => {
@@ -35,6 +36,7 @@ rectangleCalcBtn.addEventListener("click", () => {
   }
   const area = width * length;
   document.getElementById("rectangleDisplay").innerText = area;
+  areaCalculator('Rectangle',area);
 });
 // parallelogram
 parallelogramBtn.addEventListener("click", () => {
@@ -51,6 +53,7 @@ parallelogramBtn.addEventListener("click", () => {
   }
   const area = base * hight;
   document.getElementById("parallelogramDisplay").innerText = area;
+  areaCalculator('Parallelogram',area);
 });
 // rhombusBtn
 rhombusBtn.addEventListener("click", () => {
@@ -67,8 +70,9 @@ rhombusBtn.addEventListener("click", () => {
   }
   const area = 0.5 * d1 * d2;
   document.getElementById("rhombusDisplay").innerText = area;
+  areaCalculator('Rhombus',area);
 });
-// pentagonBtn
+// pentagon
 pentagonBtn.addEventListener('click',()=>{
   const p = getInputValueById("userP");
   const b = getInputValueById("userB");
@@ -83,6 +87,7 @@ pentagonBtn.addEventListener('click',()=>{
   }
   const area = 0.5 * p * b;
   document.getElementById("pentagonDisplay").innerText = area;
+  areaCalculator('Pentagon',area);
 });
 // ellipse
 ellipseBtn.addEventListener('click',()=>{
@@ -99,4 +104,5 @@ ellipseBtn.addEventListener('click',()=>{
   }
   const area = Math.PI * a * b;
   document.getElementById("ellipseDisplay").innerText = area.toFixed(2);
+  areaCalculator('Ellipse',area.toFixed(2));
 });

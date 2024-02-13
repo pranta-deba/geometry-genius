@@ -2,6 +2,8 @@ const triangleCalcBtn = document.getElementById("triangleCalcBtn");
 const rectangleCalcBtn = document.getElementById("rectangleCalcBtn");
 const parallelogramBtn = document.getElementById("parallelogramBtn");
 const rhombusBtn = document.getElementById("rhombusBtn");
+const pentagonBtn = document.getElementById("pentagonBtn");
+const ellipseBtn = document.getElementById("ellipseBtn");
 // triangle
 triangleCalcBtn.addEventListener("click", () => {
   const base = getInputValueById("userBaseNum");
@@ -65,4 +67,36 @@ rhombusBtn.addEventListener("click", () => {
   }
   const area = 0.5 * d1 * d2;
   document.getElementById("rhombusDisplay").innerText = area;
+});
+// pentagonBtn
+pentagonBtn.addEventListener('click',()=>{
+  const p = getInputValueById("userP");
+  const b = getInputValueById("userB");
+  const positiveVali = positiveNumberValidation(p, b);
+  const iNaNVali = iNaNValidation(p, b);
+  if (positiveVali !== true) {
+    alert("p and b must be positive value!");
+    return 0;
+  } else if (iNaNVali !== true) {
+    alert("input field required!");
+    return 0;
+  }
+  const area = 0.5 * p * b;
+  document.getElementById("pentagonDisplay").innerText = area;
+});
+// ellipse
+ellipseBtn.addEventListener('click',()=>{
+  const a = getInputValueById("userEllipseA");
+  const b = getInputValueById("userEllipseB");
+  const positiveVali = positiveNumberValidation(a, b);
+  const iNaNVali = iNaNValidation(a, b);
+  if (positiveVali !== true) {
+    alert("b and b must be positive value!");
+    return 0;
+  } else if (iNaNVali !== true) {
+    alert("input field required!");
+    return 0;
+  }
+  const area = Math.PI * a * b;
+  document.getElementById("ellipseDisplay").innerText = area.toFixed(2);
 });
